@@ -1,0 +1,47 @@
+ .busca{
+    font-size: 14px;
+    width: 50%;
+  }
+
+  .sex{
+    font-size: 14px;
+    width: 20%;
+    margin-left: 10%;
+  }
+
+  .selec {
+    opacity: 1;
+    font-size: 1em;
+  }
+
+  table {
+    width: 100%;
+    height: 100%;
+  }
+
+  .container{
+    height: 100%;
+  }
+
+  .example-table-container {
+    position: relative;
+    min-height: 200px;
+    max-height: 400px;
+    overflow: auto;
+  }
+
+  .fotoDeputado{
+    max-height: 70px;
+  }
+
+  .sendButton {
+    margin-left: 5px;
+    margin-top: 5px;
+  }
+
+  .section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }

@@ -1,0 +1,17 @@
+ .row{
+   width: 100%;
+   height: 50px;
+ }
+  
+
+  .mat-toolbar{
+    background-color: green;
+  }
+
+  .png{
+    background-color: transparent;
+    height: 50px;
+    margin-right: 10%;
+    margin-top: 0,5%;
+    border: none;
+  }
