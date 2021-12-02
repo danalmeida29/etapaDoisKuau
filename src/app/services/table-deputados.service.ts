@@ -20,4 +20,10 @@ export class TableDeputadosService {
         var urlString = `${URL_API}?siglaSexo=${sexo}&ordem=ASC&ordenarPor=nome`
        return this.http.get(urlString);
     }
+
+    getInfor(){
+        var urlString =`${URL_API}/id`
+        return this.http.get(urlString);
+    }
+
 }
