@@ -22,15 +22,13 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
-import { InformacaoDeputadosComponent } from './informacao-deputados/informacao-deputados.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    TableDeputadosComponent,
-    InformacaoDeputadosComponent
+    TableDeputadosComponent
   ],
   imports: [
     BrowserModule,

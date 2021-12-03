@@ -1,0 +1,58 @@
+<div class="container">  
+        <mat-form-field class= "busca" appearance="standard">
+            <mat-label>Busca de Deputados(as)</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="Buscar" #input>
+        </mat-form-field>
+
+        <mat-form-field class="sex">
+            <mat-label>sexo</mat-label>
+            <mat-select formControlName="sexId" requires>
+              <mat-option  value="m">Homem</mat-option>
+              <mat-option  value="f">Mulher</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+    <div class="example-table-container">
+
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+
+
+        <!-- Nome Column -->
+        <ng-container matColumnDef="nome">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+            <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+        </ng-container>
+
+        <!-- Partido Column -->
+        <ng-container matColumnDef="siglaPartido">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> Partido </th>
+            <td mat-cell *matCellDef="let element"> {{element.siglaPartido}} </td>
+        </ng-container>
+
+        <!-- Estado/Uf Column -->
+        <ng-container matColumnDef="siglaUf:">
+            <th mat-header-cell *matHeaderCellDef > Estado/Uf </th>
+            <td mat-cell *matCellDef="let element"> {{element.siglaUf}} </td>
+        </ng-container>
+
+        <!-- fotos Column -->
+        <ng-container matColumnDef="urlFoto">
+            <th mat-header-cell *matHeaderCellDef > Foto </th>
+            <td mat-cell *matCellDef="let element"> <img class="fotoDeputado" src="{{element.urlFoto}}"> </td>
+        </ng-container>
+
+        <!-- button Column--> 
+
+        <ng-container matColumnDef="actios">
+            <th mat-header-cell *matHeaderCellDef > ver mais</th>
+            <td mat-cell *matCellDef="let element"> 
+            <button > ver mais</button> </td>
+        </ng-container>
+
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let element; columns: displayedColumns;"></tr>
+        </table>
+        <mat-paginator [pageSizeOptions]="[5, 10]" [pageSize]="5"aria-label="Select page of users"></mat-paginator>
+    </div>
+</div>  
